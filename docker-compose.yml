@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: npm run start:dev
+    depends_on:
+      - redis
+
+  redis:
+    image: 'redis:latest'
+    ports:
+      - '6379:6379'
