@@ -30,6 +30,13 @@
 
 ```bash
 $ npm install
+$ npm run docker:setup
+
+#start project
+$ npm run docker:start
+
+#stop project
+$ npm run docker:stop
 ```
 
 ## Running the app
